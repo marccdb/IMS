@@ -1,6 +1,6 @@
 ﻿namespace IMS.Infrastructure.Interfaces
 {
-    internal interface IRepository<T>
+    public interface IRepository<T>
     {
         Task<IEnumerable<T>> GetAllTypesAsync();
 
