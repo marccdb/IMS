@@ -24,7 +24,7 @@ namespace IMS.Domain.Entities
         [Required]
         public DateTime Created_At { get; set; } = DateTime.Now;
         [Required]
-        public DateTime Updated_At { get;set; }
+        public DateTime Updated_At { get; set; }
         [Required]
         public bool Is_Active { get; set; } = true;
 

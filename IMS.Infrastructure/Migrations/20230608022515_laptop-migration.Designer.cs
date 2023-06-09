@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IMS.Infrastructure.Migrations
 {
     [DbContext(typeof(GlassesContext))]
-    [Migration("20230607222733_initial")]
-    partial class initial
+    [Migration("20230608022515_laptop-migration")]
+    partial class laptopmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

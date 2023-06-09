@@ -1,7 +1,11 @@
 ﻿namespace IMS.Infrastructure.Interfaces
 {
-    public class IServices
+    public interface IServices
     {
-
+        Task Add();
+        Task Get();
+        Task GetById();
+        Task Update();
+        Task Remove();
     }
 }
