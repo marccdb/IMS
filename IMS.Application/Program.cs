@@ -1,4 +1,5 @@
 using IMS.Domain.Entities;
+using IMS.Domain.Entities.Dependencies;
 using IMS.Infrastructure;
 using IMS.Infrastructure.Interfaces;
 using IMS.Infrastructure.Repository;
@@ -14,6 +15,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<GlassesContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
 builder.Services.AddScoped<IRepository<Glasses>, PersistGlasses>();
+builder.Services.AddScoped<IRepository<GlassesLensType>, PersistLensTypes>();
+builder.Services.AddScoped<IRepository<GlassesColor>, PersistColors>();
+builder.Services.AddScoped<IRepository<GlassesSize>, PersistSizes>();
 
 var app = builder.Build();
 

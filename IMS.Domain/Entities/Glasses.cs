@@ -1,4 +1,4 @@
-﻿using IMS.Domain.Enums;
+﻿using IMS.Domain.Entities.Dependencies;
 using System.ComponentModel.DataAnnotations;
 
 
@@ -12,9 +12,9 @@ namespace IMS.Domain.Entities
         [Required]
         public string Model { get; set; } = string.Empty;
         [Required]
-        public string LensType { get; set; } = string.Empty;
+        public GlassesLensType LensType { get; set; }
         [Required]
-        public GlassesColors Color { get; set; }
+        public GlassesColor Color { get; set; }
         [Required]
         public GlassesSize Size { get; set; }
         [Required]
@@ -24,7 +24,7 @@ namespace IMS.Domain.Entities
         [Required]
         public DateTime Created_At { get; set; } = DateTime.Now;
         [Required]
-        public DateTime Updated_At { get; set; }
+        public DateTime Updated_At { get; set; } = DateTime.Now;
         [Required]
         public bool Is_Active { get; set; } = true;
 
